@@ -1,1 +1,12 @@
 # FDD-model-for-occupant-centric-faults
+
+Improving energy efficiency in buildings is critical to reducing global carbon emissions and ensuring sustainable performance and operation. It is well established that effective commissioning and continuous monitoring can significantly reduce energy use. The literature suggests that early detection and diagnosis of faults through advanced fault detection and diagnosis (FDD) technologies can lead to energy savings of up to 30%, while also enhancing occupant comfort and indoor environmental quality. There is therefore a strong need to implement real-time and continuous FDD practices, ideally integrated from the design phase of a building's life cycle. One of the main challenges in developing robust data-driven FDD models is gathering sufficient training data and ensuring the generalizability of these models to transfer them from laboratory data to different real-world buildings, which is often overlooked in the literature.
+
+This thesis presents a proof-of-concept study focused on detecting three occupant-centric and one sensor faults using simple, well-established classification algorithms, Random Forest and XGBoost, trained on simulated building performance data for an entire year and then transferred to real world measured data. The models are first validated on a different simulated zone and then tested on measured data from a real-world meeting room to assess their generalizability and applicability. The results show that both the binary and multiclass models perform well on the simulated data, achieving high precision and recall, indicating reliability and robustness. When applied to measured data, the binary XGBoost models outperform the multiclass models and effectively detect the implemented faults. This suggests that, for specific fault types and under controlled conditions, models trained on simulation data can be successfully transferred to real-world applications. 
+
+The repository consists of:
+* 5 IDA ICE simulation files: one for each occupant-centric fault, one with all faults implemented, and finally, one fault-free. 
+* 1 dataset for each fault for binary classification, as well as one dataset including all faults for multiclass purposes. 
+* A dataset including the measured performance from the meeting room
+* Code for the data processing, labelling of the data, as well as the training and validation with simulated data.
+* Code for data processing, labelling, and testing of the developed model with measured data
